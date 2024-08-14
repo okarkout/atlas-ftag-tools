@@ -276,3 +276,17 @@
   cuts: ["iffClass == 0"]
   colour: tab:gray
   category: isolation
+
+# event discrimination for HH searches
+# dummy class to apply no cuts
+- name: signal
+  label: HH signal
+  cuts: [ ]
+  colour: tab:red
+  category: event-discrim
+
+- name: background
+  label: SM background
+  cuts: [ ]
+  colour: tab:blue
+  category: event-discrim
