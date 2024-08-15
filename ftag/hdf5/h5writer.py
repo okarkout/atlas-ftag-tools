@@ -80,8 +80,8 @@ class H5Writer:
         # optimal chunking is around 100 jets, only aply for track groups
         shape = self.shapes[name]
         chunks = (100,) + shape[1:] if shape[1:] else None
-            if shape[1:] and chunks[0] > shape[0]:
-                chunks = shape
+        if shape[1:] and chunks[0] > shape[0]:
+            chunks = shape
 
         # note: enabling the hd5 shuffle filter doesn't improve anything
         self.file.create_dataset(
