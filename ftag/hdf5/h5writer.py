@@ -81,7 +81,7 @@ class H5Writer:
         shape = self.shapes[name]
         chunks = (100,) + shape[1:] if shape[1:] else None
             if shape[1:] and chunks[0] > shape[0]:
-            chunks = shape
+                chunks = shape
 
         # note: enabling the hd5 shuffle filter doesn't improve anything
         self.file.create_dataset(
